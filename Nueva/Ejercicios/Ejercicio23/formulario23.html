@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tabla{
+            text-align: center;
+            margin: auto;
+        }
+        body{
+            color: rgb(46, 136, 38);
+            background-color: beige;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #enviar{
+            background-color: rgb(0, 0, 0);
+            color: beige     ;
+        }
+        .opciones{
+            background-color: black;
+            color: beige;
+        }
+        td{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="Ejercicio23.php" method="post" autocomplete="off">
+    <table id="tabla">
+        <tr>
+            <td>
+                <label for="nombre">Nombre: <input type="text" id="nombre" name="name" required autofocus></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lenguaje"> ¿Cual es tu lenguaje de programacion favorito?
+               <br>
+                <input type="radio" name="lenguaje" id="PHP" value="PHP"> <label for="PHP">PHP</label><br>
+                <input type="radio" name="lenguaje" id="javascript" value="JavaScript" required> <label for="javascript">JavaScript</label><br>
+                <input type="radio" name="lenguaje" id="python" value="Python" required> <label for="python">Python</label><br>
+                <input type="radio" name="lenguaje" id="java" value="Java" required> <label for="java">Java</label>
+            </label> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="opcion">
+                Escoja una opcion<br>
+                <select name="opcion1" id="opcion" required>
+                    <option class="opciones"> - Seleccionar -</option>
+                    <option class="opciones">Principiante</option>
+                    <option class="opciones">Intermedio</option>
+                    <option class="opciones">Avanzado</option>
+                </select>
+            </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="noticias" id="botonNoticias">  <label for="noticias">Deseo recibir más información y noticias</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="enviar" type="submit">Enviar</button>
+                <br>
+            </td>
+        </tr>
+    </table>
+    </form>
+    
+</body>
+</html>

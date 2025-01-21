@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio24</title>
+    <style>
+        #tabla{
+            text-align: center;
+            margin: auto;
+        }
+        body{
+            color: rgb(53, 59, 106);
+            background-color: beige;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+        #enviar{
+            background-color: rgb(0, 0, 0);
+            color: beige;
+            height: 40px;
+        }
+        .opciones{
+            background-color: black;
+            color: beige;
+        }
+        td{
+            height: 50px;
+        }
+        .op{
+            height: 30px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <form action="Ejercicio24.php" method="post" autocomplete="off">
+        <table id="tabla">
+            <tr>
+                <td>
+                    <label for="nombre">Nombre: <input type="text" id="nombre" name="name" maxlength="30" class="op" autofocus></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nSocial">Numero de seguridad social: <input type="text" id="nSocial" name="nSocial" maxlength="12" class="op" pattern="[0-9]{12}" title="Son 12 digitos y no admine letras" required></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="opcion">
+                    Escoja una opcion<br>
+                    <select name="opcion1" class="op" id="opcion" required>
+                        <option class="opciones"> - Seleccionar -</option>
+                        <option class="opciones">Medicina General</option>
+                        <option class="opciones">Pediatria</option>
+                    </select>
+                </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fecha"><input type="date" name="fechaC" id="fecha" class="op"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hora"> Horario
+                   <br>
+                    <input type="radio" name="hora" id="Mañana" value="(09:00 - 12:30)"> <label for="Mañana">Mañana (09:00 - 12:30)</label><br>
+                    <input type="radio" name="hora" id="Tarde" value="(13:00 - 16:00)"> <label for="Tarde">Tarde (13:00 - 16:00)</label><br>
+                    <input type="radio" name="hora" id="Noche" value="(17:00 - 20:00)"> <label for="Noche">Noche (17:00 - 20:00)</label><br>
+                </label> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="enviar" type="submit">Enviar</button>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        </form>
+</body>
+</html>

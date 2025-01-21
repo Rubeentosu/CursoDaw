@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 27</title>
+    <style>
+        body {
+            color: rgb(53, 59, 106);
+            background-color: beige;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+
+        .formulario {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="ej27_procesar_idioma.php" method="post">
+        <label for="opcion">Elige el idioma
+            <select name="idioma" id="opcion" required>
+                <option value=""></option>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+            </select>
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
