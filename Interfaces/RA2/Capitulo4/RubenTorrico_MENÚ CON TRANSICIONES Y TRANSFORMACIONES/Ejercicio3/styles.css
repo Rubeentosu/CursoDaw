@@ -1,0 +1,86 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+div {
+  width: 180px;
+  height: 180px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 7px;
+}
+
+.Scale{
+  background-color: blue;
+}
+.Scale:hover {
+  transform: scale(0.7);
+}
+
+
+.Rotate{
+  background-color: rgb(112, 53, 72);
+}
+.Rotate:hover{
+  transform: rotate(180deg)
+}
+.Translate{
+  background-color: rgb(99, 73, 48);
+
+}
+.Translate:hover{
+ transform: translate(5%);
+}
+.Skew{
+  background-color: rgb(255, 132, 0);
+}
+.Skew:hover{
+ transform: skew(10deg)
+}
+.SkewY{
+  background-color: #347b61;
+}
+.SkewY:hover{
+  transform: skewY(10deg);
+}
+.SkewX{
+  background-color: rgb(255, 81, 0);
+}
+.SkewX:hover{
+  transform: skewX(-5deg);
+}
+.TranslateX{
+  background-color: rgb(143, 188, 65);
+}
+.TranslateX:hover{
+  transform: translateX(15px);
+}
+
+.TranslateY{
+  background-color: rgb(135, 65, 188);
+}
+.TranslateY:hover{
+transform: translateY(15px);
+}
+
+.Perspective{
+  background-color: rgb(188, 65, 81);
+}
+.Perspective:hover{
+  transform: perspective(150px) rotateX(15deg);
+}
+
+.Matrix{
+  background-color: rgb(65, 159, 188);
+}
+.Matrix:hover{
+  transform:matrix(0.5, 0.3, 0.5, 1, 1, -2)
+}

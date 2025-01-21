@@ -1,0 +1,41 @@
+// Definir un mapa con los colores de los botones
+$colores-botones: (
+  primario: #3498db,
+  aceptar: #27ae60,
+  cancelar: #e74c3c
+);
+
+// Estilos generales para los botones
+.boton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+
+  &.primario {
+    background-color: map-get($colores-botones, primario);
+
+     &:hover {
+       background-color: darken(map-get($colores-botones, primario), 10%);
+     }
+  }
+
+  &.aceptar {
+    background-color: map-get($colores-botones, aceptar);
+
+    &:hover {
+      background-color: darken(map-get($colores-botones, aceptar), 10%);
+    }
+  }
+
+  &.cancelar {
+    background-color: map-get($colores-botones, cancelar);
+
+    &:hover {
+      background-color: darken(map-get($colores-botones, cancelar), 10%);
+    }
+  }
+}

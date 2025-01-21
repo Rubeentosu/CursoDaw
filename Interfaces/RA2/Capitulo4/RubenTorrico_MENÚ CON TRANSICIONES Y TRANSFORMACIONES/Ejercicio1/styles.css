@@ -1,0 +1,27 @@
+.contenedor {
+    width: 180px;
+    height: 180px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor:hover {
+    background-color: #f5c1bb;
+    font-size: 24px; 
+    color: rgb(0, 0, 0);
+    line-height: 2;
+    border-radius: 30px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); 
+    opacity: 0.8; 
+    transform: scale(1.1); 
+    border: 3px solid #f39c12;
+    cursor: pointer;
+}
+

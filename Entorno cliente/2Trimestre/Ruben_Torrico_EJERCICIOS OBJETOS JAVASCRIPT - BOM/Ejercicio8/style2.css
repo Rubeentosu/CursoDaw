@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    padding: 10px 20px 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+.normal{
+    background-color: #75a9ed;
+    color: #f1ebeb;
+}
+.normal:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

@@ -1,0 +1,19 @@
+
+.contenedor{
+    margin: auto;
+    text-align: center;
+}
+h2::after,h2::before{
+    content: "\1F63B";
+    font-size: 20px;
+    padding: 15px;
+}
+.lista{
+    font-size: 20px;
+    list-style-type: none;
+}
+.lista li::before{
+    content: "\1F63B";
+    font-size: 20px;
+    padding: 15px;
+}

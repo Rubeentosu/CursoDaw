@@ -1,0 +1,72 @@
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+$font-family: Arial;
+$base-font-size: 16px;
+
+$button-styles:(
+    primary-button: $primary-color,
+    secondary-button: #2ecc71,
+    buy-button: #f39c12
+);
+
+body{
+    background-color: #f2f2f2;
+    text-align: center;
+    font-family: $font-family;
+    h1{
+        font-size: 2rem;
+        color: $primary-color;
+    }
+    p{
+        font-size: 1.2rem;
+        color: #555;
+    }
+    button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+    }
+    .product{
+        background-color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .product:hover{
+        box-shadow: 0 2px 5px rgba(0,0,1,1);
+    }
+    img{
+        max-width: 100%;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .important-tex{
+        font-weight: bold;
+        color: $secondary-color;
+    }
+}
+@each $tipo, $color in $button-styles {
+    .#{$tipo} {
+        background-color: $color;
+
+        &:hover {
+         background-color: darken($color, 10%);
+       }
+    }
+}
+@mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :not(:last-child){
+        margin-right: 20px;
+    }
+}
+.centered{
+    @include center-element()
+}
+
+

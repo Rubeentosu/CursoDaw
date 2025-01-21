@@ -1,0 +1,276 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #E2E2E2;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+hr{
+    height: 20px;
+    border: none;
+    background-color: #7EC4FC;
+    border-bottom: #000000 1px solid;
+}
+.linea{
+    background-color: transparent;
+    border-bottom: #000000 1px solid;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7EC4FC;
+    color: #000000;
+}
+@media (max-width: 720px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .logo img {
+        height: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #000000;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #73777C;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #7EC4FC;
+    flex-shrink: 0;
+    bottom: 0;
+}
+.rSociales ul{
+    list-style: none;
+}
+.rSociales img{
+    width: 18px;
+}
+
+/* Pagina de Eleccion De Carta*/
+.contenedorImagenes{
+    display: flex;
+    justify-content: center;
+    height: 74dvh;
+    align-items: center;
+    text-align: center;
+}
+.contenedorImagenes > div{
+    margin: 35px;
+}
+.contenedorImagenes img{
+    width: 200px;
+    transition: background-color 1s;
+}
+.contenedorImagenes img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px #000000;
+    background-color: white;
+}
+@media (max-width: 720px) {
+    .contenedorImagenes {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        display: inline-block;
+    }
+
+    .contenedorImagenes img {
+        width: 90%;
+    }
+}
+#vinoCursor:hover,#vinoCursor img:hover,#vinoCursor a:hover{
+    cursor: url(https://cdn-icons-png.flaticon.com/128/45/45637.png), pointer;
+    
+}
+
+#menuCursor:hover,#menuCursor img:hover,#menuCursor a:hover{
+    cursor: url(https://cdn-icons-png.flaticon.com/128/605/605512.png), pointer;
+}
+
+#contactoCursor:hover,#contactoCursor img:hover,#contactoCursor a:hover{
+    cursor: url(https://cdn-icons-png.flaticon.com/128/15609/15609803.png), pointer;
+    cursor: src"";
+}
+
+/* INDEX - CALL TO ACTION */
+.cta-seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    text-align: center;
+    background-image: url(imagenes/portada.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cta-contenido h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta-botones button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #7EC4FC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-botones button:hover {
+    background-color: #005F99;
+}
+.cta-botones p{
+    font-size: 20px;
+    margin: 5px;
+    text-align: center;
+}
+.cta-botones a{
+    display: flex;
+    align-items: center;
+}
+.idioma {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+main{
+    height: 66dvh;
+}
+
+/* Pagina de MENU y VINOS*/
+.articulos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.articulos > div{
+    margin: 40px;
+    min-width: 10px;
+}
+.articulos img{
+    width: 350px;
+    height: 350px;
+}
+.articulos img:hover{
+    transform: scale(1.1);
+}
+.entrantes{
+    text-align: center;
+}
+.entrantes p{
+    text-align: left;
+}
+
+/* Pagina de CONTACTO*/
+.contenedorMapaFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.contenedorMapaFormulario > div {
+    max-width: 100%;
+}
+
+.contenedorFormularios {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #959597;
+    width: 500px;
+    height: 550px;
+    box-sizing: border-box;
+}
+
+.mapa {
+    width: 100%;
+    height: 300px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+.contenedorFormularios label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contenedorFormularios input, .contenedorFormularios select, .contenedorFormularios textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contenedorFormularios button {
+    background-color: #7EC4FC;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contenedorFormularios button:hover {
+    background-color: #005F99;
+    transform: scale(1.05);
+}
+
+@media (max-width: 720px) {
+    .contenedorMapaFormulario {
+        flex-direction: column;
+        align-items: center;
+    }
+}

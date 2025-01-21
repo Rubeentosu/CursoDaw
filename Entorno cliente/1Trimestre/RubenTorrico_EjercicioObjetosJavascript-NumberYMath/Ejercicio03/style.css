@@ -1,0 +1,53 @@
+.circulos {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: #f1ebeb;
+    color: #008547;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #008547;
+}
+button{
+    padding: 10px 20px 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+.normal{
+    background-color: #008547;
+    color: #f1ebeb;
+}
+.normal:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+table{
+    flex: content;
+    padding: 10px;
+    text-align: center;
+}
+.tablas{
+    float: left;
+}
+table tr:nth-child(odd){
+    background-color: #fae6e6;
+}
+th{
+    background-color: white;
+}
+table th:nth-child(even){
+    color: red;
+}
+td{
+    height: 20px;
+}
+.opcionSeñalada{
+    background-color: red;
+    color: white;
+}
+.opcionNoSeñalada{
+    background-color: white;
+}

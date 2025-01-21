@@ -1,0 +1,65 @@
+    1  ip a
+    2  sudo nano /etc/proftpd/proftpd.conf 
+    3  sudo nano /etc/proftpd/virtuals.conf 
+    4  sudo /etc/init.d/proftpd reload 
+    5  sudo /etc/init.d/proftpd restart 
+    6  sudo nano /etc/proftpd/virtuals.conf 
+    7  sudo /etc/init.d/proftpd reload 
+    8  sudo /etc/init.d/proftpd restart 
+    9  sudo nano /etc/proftpd/proftpd.conf 
+   10  sudo nano /etc/proftpd/virtuals.conf 
+   11  sudo /etc/init.d/proftpd reload 
+   12  sudo /etc/init.d/proftpd restart 
+   13  sudo nano /etc/host
+   14  sudo nano /etc/hosts
+   15  sudo /etc/init.d/proftpd reload 
+   16  sudo /etc/init.d/proftpd restart 
+   17  sudo nano /etc/proftpd/virtuals.conf 
+   18  sudo /etc/init.d/proftpd reload 
+   19  sudo /etc/init.d/proftpd restart 
+   20  sudo nano /etc/proftpd/virtuals.conf 
+   21  sudo /etc/init.d/proftpd reload 
+   22  sudo /etc/init.d/proftpd restart 
+   23  sudo nano /etc/proftpd/virtuals.conf 
+   24  sudo /etc/init.d/proftpd reload 
+   25  sudo /etc/init.d/proftpd restart 
+   26  sudo nano /etc/proftpd/virtuals.conf 
+   27  sudo /etc/init.d/proftpd reload 
+   28  sudo /etc/init.d/proftpd restart 
+   29  sudo nano /etc/proftpd/virtuals.conf 
+   30  sudo /etc/init.d/proftpd reload 
+   31  sudo /etc/init.d/proftpd restart 
+   32  sudo nano /etc/proftpd/virtuals.conf 
+   33  sudo /etc/init.d/proftpd reload 
+   34  sudo /etc/init.d/proftpd restart 
+   35  sudo nano /etc/proftpd/virtuals.conf 
+   36  sudo /etc/init.d/proftpd reload 
+   37  sudo /etc/init.d/proftpd restart 
+   38  sudo nano /etc/proftpd/virtuals.conf 
+   39  sudo /etc/init.d/proftpd reload 
+   40  sudo /etc/init.d/proftpd restart 
+   41  sudo nano /etc/proftpd/virtuals.conf 
+   42  sudo /etc/init.d/proftpd reload 
+   43  sudo /etc/init.d/proftpd restart 
+   44  sudo nano /etc/proftpd/virtuals.conf 
+   45  sudo /etc/init.d/proftpd reload 
+   46  sudo /etc/init.d/proftpd restart 
+   47  sudo nano /etc/proftpd/virtuals.conf 
+   48  sudo /etc/init.d/proftpd reload 
+   49  sudo /etc/init.d/proftpd restart 
+   50  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/quota.limittab
+   51  sudo ftpquota --delete-record --type=limit --name=rtorsua --quota-type=user
+   52  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/quota.limittab
+   53  ftpquota --show-records --type=limit --table-path=/etc/proftpd/quota.limittab
+   54  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/ftpquota.limittab
+   55  sudo ftpquota --delete-record --type=limit --name=rtorsua --quota-type=user
+   56  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/ftpquota.limittab
+   57  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/ftpquota.limittab ftpquota: (empty table)
+   58  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/ftpquota.limittab
+   59  sudo ftpquota --delete-record --type=limit --name=rtorsua --quota-type=User
+   60  sudo ftpquota --show-records --type=limit --table-path=/etc/proftpd/ftpquota.limittab
+   61  sudo ftpquota --delete-record --type=limit --name=rtorsua --quota-type=user
+   62  sudo nano /etc/proftpd/proftpd.conf 
+   63  sudo /etc/init.d/proftpd reload 
+   64  sudo /etc/init.d/proftpd restart 
+   65  history > ejercicio3.txt

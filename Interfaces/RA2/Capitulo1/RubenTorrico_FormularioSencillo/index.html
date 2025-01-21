@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Sencillo</title>
+    <style>
+        #formulario{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <fieldset>
+            <legend><h2>Formulario</h2></legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" pattern="[a-zA-Z áéíúóÁÉÍÓÚ]+" title="Solo se admiten letras" maxlength="40" autofocus required>
+            <br><br>
+
+            <label for="codigoPostal">Codigo postal </label>
+            <input type="text" id="codigoPostal" pattern="[0-9]{5}" placeholder="Ingrese el codigo postal" title="Deben ser 5 digitos">
+            <br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" pattern="\d{1,2}" placeholder="Ingrese su edad" title="Solo admite 1 o 2 numeros" required>
+
+        </fieldset>
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancelar</button>
+
+    </form>
+</body>
+</html>

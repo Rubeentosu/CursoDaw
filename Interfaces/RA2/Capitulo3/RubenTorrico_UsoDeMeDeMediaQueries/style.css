@@ -1,0 +1,76 @@
+
+@media (max-width: 599px){
+    .formativos li strong{
+        font-weight: bold;
+        display: block;
+    }
+    .formativos li{
+        list-style-type: none;
+    }
+    .avanzados li strong{
+        color: purple;
+        display: block;
+    }
+    .estudiar li strong{
+        color: purple;
+        display: block;
+    }
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    h1{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.2em;
+        border-bottom: 1px solid black;
+    }
+    
+}
+@media (min-width: 600px) and (max-width: 1199px){
+    .formativos li strong{
+        font-weight: bold;
+        display: block;
+    }
+    .formativos li{
+        list-style-type: none;
+    }
+    .avanzados li strong{
+        color: purple;
+    }
+    .estudiar li strong{
+        color: purple;
+        text-decoration: underline;
+    }
+    body{
+        font-family: Arial;
+    }
+    .formativos{
+        width: 50%;
+        float: left;
+        display: block;
+    }
+    .estudiar,.avanzados{
+        width: 48%;
+        float: right;
+        display: block;
+    }
+    
+}
+@media (min-width: 1200px){
+    .formativos li strong{
+        font-weight: bold;
+    }
+    .avanzados li strong{
+        color: purple;
+    }
+    .estudiar li strong{
+        color: purple;
+    }
+    .estudiar,.avanzados,.formativos{
+        width: 33%;
+        display: block;
+        float: left;
+    }
+}

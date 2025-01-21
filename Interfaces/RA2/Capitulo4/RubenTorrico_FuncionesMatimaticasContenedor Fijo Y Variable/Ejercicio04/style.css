@@ -1,0 +1,19 @@
+.spinning-wheel {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 10px solid #3498db;
+    border-top-color: transparent;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-timing-function: linear;
+}
+@keyframes spin{
+    from { 
+        transform: rotate(0deg);
+     }
+    to { 
+        transform: rotate(360deg);
+     }
+  }

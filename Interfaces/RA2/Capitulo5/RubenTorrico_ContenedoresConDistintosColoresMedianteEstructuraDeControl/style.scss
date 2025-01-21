@@ -1,0 +1,34 @@
+$colores: (
+  1: #3498db, // contenedor 1
+  2: #27ae60, // contenedor 2
+  3: #e74c3c, // contenedor 3
+  4: #9b59b6, // contenedor 4
+  5: #f1c40f, // contenedor 5
+  6: #2ecc71, // contenedor 6
+  7: #e67e22, // contenedor 7
+  8: #1abc9c, // contenedor 8
+  9: #34495e, // contenedor 9
+  10: #d35400  // contenedor 10
+);
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .caja {
+    width: 100px;
+    height: 100px;
+    transition: background-color 0.3s ease;
+  }
+
+  @each $i, $color in $colores {
+    .caja#{$i} {
+      background-color: $color;
+
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+}

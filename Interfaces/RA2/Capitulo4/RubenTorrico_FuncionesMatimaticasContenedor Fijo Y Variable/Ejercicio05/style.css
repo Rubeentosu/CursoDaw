@@ -1,0 +1,23 @@
+.circulo {
+    margin: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: aumento;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out 2s;
+    animation-direction: alternate;
+}
+@keyframes aumento{
+    0% { 
+        transform: scale(1);
+        
+        }
+   100% { 
+        transform: scale(2);
+        background-color: rgb(75, 155, 71);
+        }
+}

@@ -1,0 +1,27 @@
+.boton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.boton.primario {
+  background-color: #3498db;
+}
+.boton.primario:hover {
+  background-color: #217dbb;
+}
+.boton.aceptar {
+  background-color: #27ae60;
+}
+.boton.aceptar:hover {
+  background-color: #1e8449;
+}
+.boton.cancelar {
+  background-color: #e74c3c;
+}
+.boton.cancelar:hover {
+  background-color: #d62c1a;
+}/*# sourceMappingURL=style.css.map */

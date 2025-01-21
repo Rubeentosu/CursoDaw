@@ -1,0 +1,40 @@
+table{
+    flex: content;
+    padding: 10px;
+    text-align: center;
+}
+.tablas{
+    float: left;
+}
+table tr:nth-child(odd){
+    background-color: #fae6e6;
+}
+th{
+    background-color: white;
+}
+table th:nth-child(even){
+    color: red;
+}
+td{
+    height: 20px;
+}
+.opcionSeñalada{
+    background-color: red;
+    color: white;
+}
+.opcionNoSeñalada{
+    background-color: white;
+}
+button{
+    padding: 10px 20px 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+.normal{
+    background-color: #fae6e6;
+}
+.normal:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

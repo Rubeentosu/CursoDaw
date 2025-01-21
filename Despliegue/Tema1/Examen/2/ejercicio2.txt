@@ -1,0 +1,74 @@
+    1  ip a
+    2  sudo nano /etc/proftpd/proftpd.conf 
+    3  sudo /etc/init.d/proftpd reload
+    4  sudo /etc/init.d/proftpd restart
+    5  history > ejercicio1.txt
+    6  ip a
+    7  history
+    8  sudo nano /etc/proftpd/proftpd.conf 
+    9  sudo /etc/init.d/proftpd reload
+   10  sudo /etc/init.d/proftpd restart
+   11  id a
+   12  id ftp
+   13  ftpasswd --passwd --name rtorsua --file /etc/passwd.usuarios.virtuales --uid 103 --home /home/virtuales/rtorsua --shell /bin/false
+   14  sudo mkdir /home/virtuales/rtorsua
+   15  sudo mkdir /home/virtuales
+   16  sudo mkdir /home/virtuales/rtorsua
+   17  sudo ftpasswd --passwd --name rtorsua --file /etc/passwd.usuarios.virtuales --uid 103 --home /home/virtuales/rtorsua --shell /bin/false
+   18  sudo nano /etc/proftpd/proftpd.conf 
+   19  sudo /etc/init.d/proftpd reload
+   20  sudo /etc/init.d/proftpd restart
+   21  sudo /etc/init.d/proftpd reload
+   22  sudo /etc/init.d/proftpd restart
+   23  ip a
+   24  sudo ftpasswd --passwd --name rtorsua1 --file /etc/passwd.usuarios.virtuales --uid 103 --home /home/virtuales/rtorsua --shell /bin/false
+   25  sudo /etc/init.d/proftpd reload
+   26  sudo /etc/init.d/proftpd restart
+   27  ls /home/virtuales/rtorsua/
+   28  ls -la /home/virtuales/rtorsua/
+   29  sudo ftpasswd --passwd --name rtorsua --file /etc/passwd.usuarios.virtuales --uid 103 --home /home/virtuales/rtorsua --shell /bin/false
+   30  sudo /etc/init.d/proftpd reload
+   31  sudo /etc/init.d/proftpd restart
+   32  sudo nano /etc/proftpd/proftpd.conf 
+   33  sudo /etc/init.d/proftpd reload
+   34  sudo /etc/init.d/proftpd restart
+   35  sudo nano /etc/proftpd/proftpd.conf 
+   36  sudo /etc/init.d/proftpd reload
+   37  sudo /etc/init.d/proftpd restart
+   38  sudo nano /etc/proftpd/proftpd.conf 
+   39  sudo /etc/init.d/proftpd reload
+   40  sudo /etc/init.d/proftpd restart
+   41  sudo nano /etc/proftpd/proftpd.conf 
+   42  ftpquota --create-table --type=limit --table-path=/etc/proftpd/ftpquota.limittab
+   43  sudo ftpquota --create-table --type=limit --table-path=/etc/proftpd/ftpquota.limittab
+   44  sudo ftpquota --create-table --type=tally --table-path=/etc/proftpd/ftpquota.tallytab
+   45  ftpquota --add-record --type=limit --name=rtorsua --quota-type=user --byte-upload=1 --units=Mb --table-path=/etc/proftpd/ftpquota.limittab
+   46  sudo ftpquota --add-record --type=limit --name=rtorsua --quota-type=user --byte-upload=1 --units=Mb --table-path=/etc/proftpd/ftpquota.limittab
+   47  sudo ftpquota --add-record --type=limit --name=rtorsua --quota-type=user --bytes-upload=1 --units=Mb --table-path=/etc/proftpd/ftpquota.limittab
+   48  sudo ftpquota --update-record --type=limit --name=rtorsua --quota-type=user --bytes-upload=1 --units=Mb --table-path=/etc/proftpd/ftpquota.limittab
+   49  sudo /etc/init.d/proftpd reload
+   50  sudo /etc/init.d/proftpd restart
+   51  sudo nano /etc/proftpd/proftpd.conf 
+   52  sudo nano /etc/proftpd/virtuals.conf 
+   53  sudo nano /etc/proftpd/proftpd.conf 
+   54  sudo /etc/init.d/proftpd reload
+   55  sudo /etc/init.d/proftpd restart
+   56  ip a
+   57  chown rtorsua /home/virtuales/rtorsua/
+   58  sudo chown rtorsua /home/virtuales/rtorsua/
+   59  tail -f /var/log/proftpd/quota.log 
+   60  sudo tail -f /var/log/proftpd/quota.log 
+   61  sudo nano /etc/proftpd/proftpd.conf 
+   62  sudo /etc/init.d/proftpd reload
+   63  sudo /etc/init.d/proftpd restart
+   64  sudo tail -f /var/log/proftpd/quota.log 
+   65  sudo tail -f /var/log/proftpd/proftpd.log 
+   66  ls -la /home/virtuales/rtorsua/
+   67  sudo chown /home/virtuales/rtorsua/
+   68  sudo chown --help
+   69  sudo chown -R rtorsua /home/virtuales/rtorsua/
+   70  sudo chown ftp /home/virtuales/rtorsua/
+   71  sudo /etc/init.d/proftpd reload
+   72  sudo /etc/init.d/proftpd restart
+   73  sudo history > ejercicio2.txt
+   74  history > ejercicio2.txt

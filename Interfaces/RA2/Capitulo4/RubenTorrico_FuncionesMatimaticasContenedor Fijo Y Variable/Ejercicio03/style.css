@@ -1,0 +1,22 @@
+div{
+    background-color: blue;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: movimiento;
+}
+@keyframes movimiento {
+    from { 
+        transform: translateY(0px);
+        animation-timing-function: ease-in;
+     }
+    50% { 
+        transform: translateY(100px);
+        animation-timing-function: ease-out;
+     }
+  }
+hr{
+    margin-top: 100px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion De Un Formulario De Registro</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend><b>Información Personal:</b></legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" pattern="[a-zA-Z áéíúóÁÉÍÓÚ]+" title="Solo se admiten letras" maxlength="40" autofocus required>
+            <br><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido" pattern="[a-zA-Z áéíúóÁÉÍÓÚ]+" title="Solo se admiten letras" maxlength="40" required>
+            <br><br>
+
+            <label for="fNacim">Fecha nacimiento:</label>
+            <input type="date" id="fNacim" pattern="[a-zA-Z áéíúóÁÉÍÓÚ]+" title="Solo se admiten letras" required>
+            <br><br>
+
+            <label for="genero">Género</label><br>
+            <input type="radio" name="genero" id="masculino" required><label for="masculino">Masculino</label><br>
+            <input type="radio" name="genero" id="femenino" required><label for="femenino">Femenino</label><br>
+            <input type="radio" name="genero" id="otro" required><label for="otro">Otro</label>
+        </fieldset>
+        <fieldset>
+            <legend><b>Información de Contacto:</b></legend>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" required>
+            <br><br>
+
+            <label for="telefono">Numero de teléfono:</label>
+            <input type="text" id="telefono" pattern="[0-9]+" title="Debe ser un numero de telefono valido" required>
+            <br><br>
+
+            <label for="direccion">Dirección:</label><br>
+            <textarea id="direccion" rows="3" cols="40"></textarea>
+
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend><b>Información de Cuenta:</b></legend>
+            <label for="nUsuario">Nombre de usuario:</label>
+            <input type="text" maxlength="20" required>
+            <br><br>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" required>
+            <br><br>
+
+            <label for="validContrasena">Confirmar contraseña:</label>
+            <input type="password"  id="validContrasena" required>
+        </fieldset>
+        <fieldset>
+            <legend><b>Preferencias:</b></legend>
+            <label for="color">Selecciona un Color Favorito</label>
+            <select id="color">
+                <option value="Rojo">Rojo</option>
+                <option value="Rojo">Verde</option>
+                <option value="Rojo">Azul</option>
+                <option value="Rojo">Amarillo</option>
+            </select>
+            <br><br>
+
+            <input type="checkbox" id="terminos" required><label for="terminos">Aceptar Términos y condiciones</label>
+        </fieldset>
+        <button type="submit">Registrarse</button>
+    </form>
+</html>

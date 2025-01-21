@@ -1,0 +1,22 @@
+.animacion{
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-name: rotacion;
+    width: 250px;
+}
+div{
+    background-color: #f3e5d2;
+    width: 250px;
+}
+
+@keyframes rotacion {
+    from { 
+        transform: rotate(0deg);
+     }
+    50% { 
+        transform: rotateY(180deg);
+     }
+    to { 
+        transform: rotate(0deg);
+     }
+  }

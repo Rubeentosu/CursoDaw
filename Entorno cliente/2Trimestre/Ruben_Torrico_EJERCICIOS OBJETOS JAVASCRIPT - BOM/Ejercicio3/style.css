@@ -1,0 +1,39 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+.normal {
+    background-color: #2170d8;
+    color: #f1ebeb;
+}
+
+.normal:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.contenedor {
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+#descarga{
+    width: 15px;
+    color: white;
+}
+
+img {
+    width: 180px;
+}
+p{
+    color: black;
+}
+#nav{
+    width: 60px;
+}

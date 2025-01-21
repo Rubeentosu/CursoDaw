@@ -1,0 +1,14 @@
+/* Definición de variables personalizadas */
+:root {
+    --color-principal: #3498db;
+    --color-secundario: white;
+    --radio-esquinas: 10px; 
+}
+
+.parrafo {
+    background-color: var(--color-principal);
+    border-radius: var(--radio-esquinas);
+    padding: 20px;
+    color: var(--color-secundario);
+    font-size: 18px; 
+}

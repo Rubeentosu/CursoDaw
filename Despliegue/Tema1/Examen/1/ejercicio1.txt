@@ -1,0 +1,5 @@
+    1  ip a
+    2  sudo nano /etc/proftpd/proftpd.conf 
+    3  sudo /etc/init.d/proftpd reload
+    4  sudo /etc/init.d/proftpd restart
+    5  history > ejercicio1.txt

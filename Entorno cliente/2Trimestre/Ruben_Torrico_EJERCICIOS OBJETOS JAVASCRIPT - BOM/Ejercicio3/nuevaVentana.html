@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar RadarSystem</title>
+  <link rel="stylesheet" href="style1.css">
+  <script src="logicaJS.js"></script>
+</head>
+<body onload="inicializar()">
+  <div class="contenedor">
+    <h1>Descargar RadarSystem para <span id="navegador1"></span></h1>
+    <p><span id="navegador2"></span> <span id="navegadorVersion"></span></p>
+    <form>
+      <p>Selecciona tu paquete de descarga:</p>
+      <div class="opciones">
+        <label>
+          <input type="radio" name="opcion" value="ordenador" checked>
+          Dispositivo de escritorio
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="opcion" value="movil">
+          Dispositivo móvil
+        </label>
+      </div>
+      <p class="legal">
+        Al descargar RadarSystem, aceptas la 
+        <a href="#">Legislación vigente en tu ubicación <span id="localizacion"></span></a>.
+      </p>
+      <button type="submit" class="normal">Aceptar e instalar</button>
+    </form>
+  </div>
+</body>
+</html>

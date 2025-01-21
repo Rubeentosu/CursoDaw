@@ -1,0 +1,70 @@
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contenedor .caja {
+  width: 100px;
+  height: 100px;
+  transition: background-color 0.3s ease;
+}
+.contenedor .caja1 {
+  background-color: #3498db;
+}
+.contenedor .caja1:hover {
+  background-color: #217dbb;
+}
+.contenedor .caja2 {
+  background-color: #27ae60;
+}
+.contenedor .caja2:hover {
+  background-color: #1e8449;
+}
+.contenedor .caja3 {
+  background-color: #e74c3c;
+}
+.contenedor .caja3:hover {
+  background-color: #d62c1a;
+}
+.contenedor .caja4 {
+  background-color: #9b59b6;
+}
+.contenedor .caja4:hover {
+  background-color: #804399;
+}
+.contenedor .caja5 {
+  background-color: #f1c40f;
+}
+.contenedor .caja5:hover {
+  background-color: #c29d0b;
+}
+.contenedor .caja6 {
+  background-color: #2ecc71;
+}
+.contenedor .caja6:hover {
+  background-color: #25a25a;
+}
+.contenedor .caja7 {
+  background-color: #e67e22;
+}
+.contenedor .caja7:hover {
+  background-color: #bf6516;
+}
+.contenedor .caja8 {
+  background-color: #1abc9c;
+}
+.contenedor .caja8:hover {
+  background-color: #148f77;
+}
+.contenedor .caja9 {
+  background-color: #34495e;
+}
+.contenedor .caja9:hover {
+  background-color: #22303d;
+}
+.contenedor .caja10 {
+  background-color: #d35400;
+}
+.contenedor .caja10:hover {
+  background-color: #a04000;
+}/*# sourceMappingURL=style.css.map */

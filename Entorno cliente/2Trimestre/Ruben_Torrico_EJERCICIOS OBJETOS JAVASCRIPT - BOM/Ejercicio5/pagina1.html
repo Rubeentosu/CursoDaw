@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="logicaJS.js"></script>
+    <link rel="stylesheet" href="styleSecundario.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend><h2>Formulario</h2></legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+            <br><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" placeholder="Ingrese sus apellidos">
+            <br>
+        </fieldset>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancelar</button>
+    </form>
+    <p id="p1">Párrafo 1</p>
+    <p class="pa2" id="p2">Párrafo 2</p>
+    <p id="p3">Párrafo 3</p>
+    <p id="p4">Párrafo 4</p>
+    <img id="imagen" src="foto.png" alt="Imagen de ejemplo">
+
+    <br>
+    <button class="normal" onclick="recuperarSegundoParrafo()">Recuperar el segundo parrafo</button>
+    <button class="normal" onclick="modificarParrafos()">Modificar segundo y tercer párrafo</button>
+    <button class="normal" onclick="eliminarCuartoParrafo()">Eliminar cuarto párrafo</button>
+    <button class="normal" onclick="crearParrafos()">Crear párrafos</button>
+    <button class="normal" onclick="modificarImagen()">Modificar imagen</button>
+    <button class="normal" onclick="modificarFormulario()">Modificar formulario</button>
+    <button class="normal" onclick="usarDocumentWrite()">Método write</button>
+</body>
+</html>

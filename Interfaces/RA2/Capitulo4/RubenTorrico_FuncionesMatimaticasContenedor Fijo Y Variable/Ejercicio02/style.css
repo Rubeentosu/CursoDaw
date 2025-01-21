@@ -1,0 +1,18 @@
+.animacion{
+    animation-duration: 3s;
+    animation-name: deslizar;
+}
+div{
+    background-color: #f3e5d2;
+    width: 250px;
+}
+
+@keyframes deslizar {
+    from { 
+        margin-left: 100%;
+        width: 100%;
+    }
+    to { 
+        width: 100%;
+    }
+  }

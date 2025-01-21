@@ -1,0 +1,23 @@
+body*{
+    margin: 0;
+}
+.contenedor-imagenes{
+    margin: 0 auto;
+    width: 500px;
+    margin: 0 auto;
+}
+.contenedor-imagenes h2{
+    text-align: center;
+    background-color: #EDEEEE;
+    color: orange;
+    border-bottom: 3px solid #4caf50;
+    padding: 30px;
+}
+.contenedor-imagenes img{
+    float: left;
+    padding: 1.2em;
+}
+.contenedor-imagenes img:hover{
+    background-color: #EDEEEE;
+}
+

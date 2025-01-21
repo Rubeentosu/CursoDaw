@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logicaJS.js"></script>
+</head>
+<body>
+    <noscript>
+        Este navegador no puede ejecutar los scripts que hay en la página.<br>
+        Te recomendamos que <b>actualices el navegador o habilites JavaScript.</b>
+    </noscript>
+    
+    <header>
+        <h1>EJERCICIOS SINTAXIS JAVASCRIPT - BOM</h1>
+        <p id="enunciadoAE"></p>
+        <br>
+        <button class="normal" name="botonResolucion" onclick="verEnunciado()">Ver enunciado</button>
+    </header>
+
+    <div class="solucion">
+        <h1 class="titulo">Buscaminas: Navegador de niveles</h1>
+        <p id="nivelActual">Nivel 1</p>
+        <button id="anterior" class="normal" onclick="atras()" disabled>Nivel Anterior</button>
+        <button id="siguiente" class="normal" onclick="adelante()">Siguiente Nivel</button>
+    </div>
+</body>
+</html>

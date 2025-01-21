@@ -1,0 +1,2 @@
+En el historial no esta como he creado la carpeta y le he dado permisos porque al apagar la maquina se ha perdido el historial.
+Las capturas entan del lunes 4 porque no mostra bien que la subida y descarga era con el ftp anonimo

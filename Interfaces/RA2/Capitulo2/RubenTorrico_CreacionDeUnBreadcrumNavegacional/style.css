@@ -1,0 +1,20 @@
+.breadcrum a{
+    color: #0095eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+.breadcrum{
+    font-family: Arial;
+    margin: 0.5em;
+}
+.breadcrum a:hover{
+    color: #006196;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}

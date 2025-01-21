@@ -1,0 +1,33 @@
+button{
+    padding: 10px 20px 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+.normal{
+    background-color: #3498db;
+    color: white;
+}
+.outline{
+    border: 2px solid #3498db;
+    background: none;
+    color: #3498db;
+}
+.alerta{
+    background-color: #e74c3c;
+    color: white;
+}
+.normal:hover{
+    cursor: crosshair;
+    transform: scale(1.1);
+}
+.outline:hover{
+    cursor: crosshair;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.alerta:hover{
+    cursor: crosshair;
+    transform: scale(1.1);
+    cursor: help;
+}

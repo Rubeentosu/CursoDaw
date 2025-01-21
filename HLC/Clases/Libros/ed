@@ -1,0 +1,52 @@
+class Biblioteca:
+
+    def __init__(self, libros_disponibles=None, libros_prestados=None):
+        # If no arguments are passed, default to empty lists.
+        self.libros_disponibles = libros_disponibles or ["libro1", "libro2", "libro3"]
+        self.libros_prestados = libros_prestados or []
+
+    def mostrar_libros_disponibles(self):
+        # Display available books
+        if self.libros_disponibles:
+            print("Libros disponibles:")
+            for libro in self.libros_disponibles:
+                print(libro)
+        else:
+            print("No hay libros disponibles.")
+
+    def menu(self):
+        # Display the menu options
+        print("\nFICHAJES")
+        print("1. Añadir libro")
+        print("2. Mostrar libros disponibles")
+        print("3. Prestar libro")
+        print("4. Devolver libro")
+        print("5. Buscar libro")
+        print("6. Salir")
+
+    def menu_funcional(self):
+        salir = False
+        while not salir:
+            self.menu()
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == '1':
+                self.agregar_libro()
+            elif opcion == '2':
+                self.mostrar_libros_disponibles()
+            elif opcion == '3':
+                self.prestar_libro()
+            elif opcion == '4':
+                self.devolver_libro()
+            elif opcion == '5':
+                self.buscar_libro()
+            elif opcion == '6':
+                print("Saliendo de la biblioteca...")
+                salir = True
+            else:
+                print("Opción no válida, por favor seleccione una opción válida.")
+
+# Create a Biblioteca instance and start the menu function
+biblioteca = Biblioteca()
+biblioteca.menu_funcional()
+
