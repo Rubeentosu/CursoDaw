@@ -9,6 +9,14 @@ function verEnunciado() {
     document.getElementById("enunciadoAE").innerHTML = enunciado;
 }
 
-function solucion() {
-    document.getElementById("1").innerHTML="hola";
+const productos = {
+    zamburinas: 3.5,
+    mejillones: 3.5,
+    gambas: 3.5,
+    vinoBlanco: 3.5,
+    cervezaVictoria: 3.5
+};
+
+class mesa{
+    constructor()
 }
