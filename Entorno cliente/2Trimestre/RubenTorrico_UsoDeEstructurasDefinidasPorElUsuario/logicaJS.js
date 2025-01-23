@@ -17,6 +17,3 @@ const productos = {
     cervezaVictoria: 3.5
 };
 
-class mesa{
-    constructor()
-}
