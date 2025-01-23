@@ -16,4 +16,15 @@ const productos = {
     vinoBlanco: 3.5,
     cervezaVictoria: 3.5
 };
+let mesasCreadas = [];
 
+class mesa{
+
+    constructor(ubicacionMesa, clientes){
+        this.ubicacionMesa = ubicacionMesa;
+        this.clientes = [];
+    }
+    //getter y setter
+    
+
+}
