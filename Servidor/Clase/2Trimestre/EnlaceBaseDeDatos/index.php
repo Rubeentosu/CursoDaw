@@ -23,7 +23,7 @@
     //mysqli_fetch_assoc();
     //obtener resultados
     while($registro = mysqli_fetch_assoc($resultado)){
-        echo "El codigo del juego es" . $registro["IdJuego"].
+        echo "El codigo del juego es" . $registro["idJuego"].
         ", Nombre del juego: ".$registro["nombreJuego"].
         ", Nombre del delegado es: ".$registro["delegado"]."<br>";
     }
