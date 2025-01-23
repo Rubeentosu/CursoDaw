@@ -18,13 +18,25 @@ const productos = {
 };
 let mesasCreadas = [];
 
-class mesa{
-
-    constructor(ubicacionMesa, clientes){
+class Mesa {
+    constructor(ubicacionMesa) {
         this.ubicacionMesa = ubicacionMesa;
         this.clientes = [];
+        this.registrarHistorial(`Se ha creado la mesa en la ubicación ${this.ubicacionMesa}.`);
     }
-    //getter y setter
-    
 
+    // Getter y setter para la ubicación
+    get ubicacion() {
+        return this.ubicacionMesa;
+    }
+
+    set ubicacion(nuevaUbicacion) {
+        this.ubicacionMesa = nuevaUbicacion;
+        this.registrarHistorial(`La mesa se ha cambiado a la ubicación ${nuevaUbicacion}.`);
+    }
+
+    // Método para añadir clientes
+    agregarCliente(cliente) {
+        this.clientes.push(cliente);
+    }
 }
