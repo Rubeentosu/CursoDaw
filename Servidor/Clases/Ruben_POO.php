@@ -21,7 +21,7 @@ class Empleado {
     public function getEdad() {
         return $this->edad;
     }
-
+    
     public function setEdad($edad) {
         $this->edad = $edad;
     }
