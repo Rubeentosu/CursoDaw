@@ -163,3 +163,8 @@ function borrarMesa() {
         alert("La mesa no existe.");
     }
 }
+
+//Cada ubicacion sea unicamente de una mesa y que no se pueda repetir
+//todas las funciones tienen que llamar a la ubiacion de la mesa y no a la mesa en si
+//Cuando la mesa se crea pide una ubicacion y el boton establecer ubicacion es por si se quisiera cambiar la mesa de ubicacion
+//quiero que sigas las pautas por la que sigue el codigo y no añadas cosas estrañas a lo que hay
