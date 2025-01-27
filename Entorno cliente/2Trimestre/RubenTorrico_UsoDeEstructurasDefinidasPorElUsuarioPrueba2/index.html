@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <noscript>
+        Este navegador no puede ejecutar los scripts que hay en la pagina.<br>
+        Te recomendamos que <b>actualices el navegador o habilites javaScript.</b>
+    </noscript>
+    <header>
+        <h1>
+            EJERCICIOS SINTAXIS JAVASCRIPT - BOM
+        </h1>
+    </header>
+        <div class="solucion">
+            <h2>Gestión de Comandas</h2>
+        </div>
+    
+        <div class="solucion" id="controls">
+            <button class="normal" onclick="crearMesa()">Crear Mesa</button>
+            <button class="normal" onclick="establecerUbicacion()">Establecer Ubicación</button>
+            <button class="normal" onclick="establecerClientes()">Establecer Clientes</button>
+            <button class="normal" onclick="agregarProducto()">Agregar Producto</button>
+            <button class="normal" onclick="mostrarComandaMesa()">Mostrar Comanda Mesa</button>
+            <button class="normal" onclick="mostrarComandaCliente()">Mostrar Comanda Cliente</button>
+            <button class="normal" onclick="borrarMesa()">Borrar Mesa</button>
+        </div>
+    
+        <div class="solucion" id="historial"></div>
+    
+        <script src="logicaJS.js"></script>
+</body>
+</html>
