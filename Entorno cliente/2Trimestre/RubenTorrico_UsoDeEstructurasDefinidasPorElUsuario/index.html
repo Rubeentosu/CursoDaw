@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
     <link rel="stylesheet" href="style.css">
-    <script src="logicaJS.js"></script>
+    
 </head>
 <body>
     <noscript>
@@ -20,12 +20,22 @@
             <br>
             <button class="normal" name="botonResolucion" onclick="verEnunciado()">Ver enunciado</button>
         </header>
-    <div class="solucion">
-        <h3 id="1">
-            Para crear una nueva ventana pulsa <b><i>"Nueva ventana".</i></b>
-        </h3>
-        <button class="normal" name="botonResolucion"  onclick="solucion()">Prueba</button>
-        <br>
-    </div>
+        <header>
+            <h1>Gestión de Comandas</h1>
+        </header>
+    
+        <div class="solucion" id="controls">
+            <button class="normal" onclick="crearMesa()">Crear Mesa</button>
+            <button class="normal" onclick="establecerUbicacion()">Establecer Ubicación</button>
+            <button class="normal" onclick="establecerClientes()">Establecer Clientes</button>
+            <button class="normal" onclick="agregarProducto()">Agregar Producto</button>
+            <button class="normal" onclick="mostrarComandaMesa()">Mostrar Comanda Mesa</button>
+            <button class="normal" onclick="mostrarComandaCliente()">Mostrar Comanda Cliente</button>
+            <button class="normal" onclick="borrarMesa()">Borrar Mesa</button>
+        </div>
+    
+        <div class="solucion" id="historial"></div>
+    
+        <script src="logicaJS.js"></script>
 </body>
 </html>
