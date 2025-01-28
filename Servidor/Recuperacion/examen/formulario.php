@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["producto"]) && isset($
 </head>
 <body>
     <h1>Seleccione productos para el carrito</h1>
-    <form method="post" action="">
+    <form method="post" action="formulario.php">
         <label for="producto">Producto:</label>
         <select name="producto" id="producto" required>
             <?php 
