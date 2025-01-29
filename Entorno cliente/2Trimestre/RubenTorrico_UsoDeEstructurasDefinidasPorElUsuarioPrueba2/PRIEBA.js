@@ -17,6 +17,7 @@ const productos = {
     cervezaVictoria: 3.5
 };
 
+
 // Productos definidos
 const p_zamburinas = ["zamburiñas", 3.5];
 const p_mejillones = ["mejillones", 3.5];
