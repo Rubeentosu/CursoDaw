@@ -5,40 +5,38 @@ let p_gambas = ["gambas", 3.5];
 let p_vinoBlanco = ["vino blanco", 3.5];
 let p_cerveVictoria = ["cerveza Victoria", 3.5];
 
-// Variable global para almacenar todas las mesas
+// Variables globales para almacenar mesas y ubicaciones ocupadas
 let mesas = {};
+let ubicacionesOcupadas = {};
 
 // Clase Mesa
 class Mesa {
-    // Constructor de la clase
-    constructor(numero) {
+    constructor(numero, ubicacion) {
         this.numero = numero;
-        this.ubicacion = null;
+        this.ubicacion = ubicacion;
         this.clientes = {};
         this.comandas = [];
-        this.mostrarMensaje(`Se ha creado la mesa ${numero}.`);
-    }
-
-    //Métodos de la clase
-    setUbicacion(ubicacion) {
-        if (this.ubicacion) {
-            alert("Mesa ocupada");
-        } else {
-            this.ubicacion = ubicacion;
-            this.mostrarMensaje(`Ubicación de la mesa ${this.numero}: ${ubicacion}.`);
-        }
+        ubicacionesOcupadas[ubicacion] = numero;
+        this.mostrarMensaje(`Se ha creado la mesa ${numero} en la ubicación ${ubicacion}.`);
     }
 
     setNumeroClientes(cantidad) {
-        for (let i = 0; i < cantidad; i++) {
-            this.clientes[i] = []; // Inicializamos cada cliente con un array vacío
+        let nuevosClientes = {};
+        for (let i = 1; i <= cantidad; i++) {
+            if (this.clientes[i]) {
+                nuevosClientes[i] = this.clientes[i];
+            } else {
+                nuevosClientes[i] = [];
+            }
         }
-        this.mostrarMensaje(`Se han sentado ${cantidad} clientes en la mesa ${this.numero}.`);
+
+        this.clientes = nuevosClientes;
+        this.mostrarMensaje(`Ahora hay ${cantidad} clientes en la mesa ${this.numero}.`);
     }
 
-    agregarProducto(producto, idCliente) { 
+    agregarProducto(producto, idCliente) {
         if (this.clientes[idCliente] !== undefined) {
-            this.clientes[idCliente].push(producto); // Asociamos el producto al cliente específico
+            this.clientes[idCliente].push(producto);
             this.comandas.push(producto);
             this.mostrarMensaje(`El cliente ${idCliente} de la mesa ${this.numero} ha comandado ${producto[0]}.`);
         } else {
@@ -49,12 +47,10 @@ class Mesa {
     obtenerComandaMesa() {
         let total = 0;
         this.mostrarMensaje(`Comanda de la mesa ${this.numero}:`);
-        for (let i = 0; i < this.comandas.length; i++) {
-            let producto = this.comandas[i];
+        for (let producto of this.comandas) {
             this.mostrarMensaje(`- ${producto[0]}: ${producto[1]}€`);
             total += producto[1];
         }
-    
         this.mostrarMensaje(`Total: ${total}€`);
     }
 
@@ -62,23 +58,19 @@ class Mesa {
         if (this.clientes[idCliente] !== undefined) {
             let total = 0;
             this.mostrarMensaje(`Comanda del cliente ${idCliente} de la mesa ${this.numero}:`);
-            
-            // Usamos un bucle for tradicional
-            for (let i = 0; i < this.clientes[idCliente].length; i++) {
-                let producto = this.clientes[idCliente][i];
+            for (let producto of this.clientes[idCliente]) {
                 this.mostrarMensaje(`- ${producto[0]}: ${producto[1]}€`);
                 total += producto[1];
             }
-    
             this.mostrarMensaje(`Total: ${total}€`);
         } else {
             this.mostrarMensaje(`El cliente ${idCliente} no existe en la mesa ${this.numero}.`);
         }
     }
-    
 
     borrarMesaMensaje() {
-        this.mostrarMensaje(`La mesa ${this.numero} ha sido borrada.`);
+        this.mostrarMensaje(`La mesa ${this.numero} en la ubicación ${this.ubicacion} ha sido borrada.`);
+        delete ubicacionesOcupadas[this.ubicacion];
     }
 
     mostrarMensaje(mensaje) {
@@ -93,19 +85,14 @@ class Mesa {
 function crearMesa() {
     let numero = prompt("Introduce el número de la mesa:");
     if (numero && !mesas[numero]) {
-        mesas[numero] = new Mesa(numero);
-    } else if (mesas[numero]) {
-        alert("Esa mesa ya existe.");
-    }
-}
-
-function establecerUbicacion() {
-    let numero = prompt("Introduce el número de la mesa:");
-    if (mesas[numero]) {
-        let ubicacion = prompt("Introduce la ubicación de la mesa:");
-        mesas[numero].setUbicacion(ubicacion);
+        let ubicacion = prompt("Introduce la ubicación de la mesa (1-18):");
+        if (ubicacion >= 1 && ubicacion <= 18 && !ubicacionesOcupadas[ubicacion]) {
+            mesas[numero] = new Mesa(numero, ubicacion);
+        } else {
+            alert("Ubicación no válida o ya ocupada.");
+        }
     } else {
-        alert("La mesa no existe.");
+        alert("Esa mesa ya existe.");
     }
 }
 
@@ -164,10 +151,19 @@ function borrarMesa() {
     }
 }
 
-/*
- Cada ubicacion sea unicamente de una mesa y que no se pueda repetir,
-  en los metedos debemos llamar a la ubicacion de la mesa y no a la mesa en si y la la ubicacion de le mesa debe ser de la 1 al 18
-  quiero que sigas las pautas por la que sigue el codigo y no añadas cosas estrañas a lo que hay
-  para borrar la mesa debemos llamar a la ubicacion tambien y ese lugar queda vacio pudiendo mas tarde 
-  añadirle otra mesa distinta
-*/
+function cambiarUbicacionMesa() {
+    let numero = prompt("Introduce el número de la mesa que deseas mover:");
+    if (mesas[numero]) {
+        let nuevaUbicacion = prompt("Introduce la nueva ubicación de la mesa (1-18):");
+        if (nuevaUbicacion >= 1 && nuevaUbicacion <= 18 && !ubicacionesOcupadas[nuevaUbicacion]) {
+            delete ubicacionesOcupadas[mesas[numero].ubicacion]; // Liberamos la ubicación anterior
+            mesas[numero].ubicacion = nuevaUbicacion; // Asignamos la nueva ubicación
+            ubicacionesOcupadas[nuevaUbicacion] = numero; // Marcamos la nueva ubicación como ocupada
+            mesas[numero].mostrarMensaje(`La mesa ${numero} ha sido movida a la ubicación ${nuevaUbicacion}.`);
+        } else {
+            alert("Ubicación no válida o ya ocupada.");
+        }
+    } else {
+        alert("La mesa no existe.");
+    }
+}

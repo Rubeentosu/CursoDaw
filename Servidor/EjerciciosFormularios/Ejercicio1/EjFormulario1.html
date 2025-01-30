@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario 1</title>
+</head>
+<body>
+    <h1>"TECNOLOGÍA DOMÉSTICA"</h1>
+    <img src="Foto1.png" alt="imagen1" width="300px">
+    <img src="Foto2.png" alt="imagen2" width="300px">
+    <h2>Ofertas de subcripción durante un año</h2>
+    <p><b>Precios hasta el 15 de diciembre</b></p>
+    <ul>
+        <li>Pago semanal ..... 50,00€</li>
+        <li>Pago semestral ... 50,00€</li>
+        <li>Pago anual ....... 50,00€</li>
+    </ul>
+    <h2>FORMULARIO DE SUBCRIPCIÓN</h2>
+
+    <table>
+        <tr>
+            <td><label for="nombre">Nombre:</label> <input type="text" id="nombre"> </td>
+            <td><label for="fecha">F.Nac.:</label> <input type="date" id="fecha"></td>
+            <td><label for="dni">DNI:</label><input type="text" id="dni"></td>
+        </tr>
+        <tr>
+            <td><label for="apellido">Apellido:</label> <input type="text" id="apellido"> </td>
+        </tr>
+        <tr>
+            <td><label for="direccion">Calle y número</label> <input type="text" id="direccion"></td>
+        </tr>
+        <tr>
+            <td><label for="postal">Código Postal:</label> <input type="text" id="postal"></td>
+            <td><label for="ciudad">Ciudad</label> <input type="text" id="ciudad"></td>
+        </tr>
+        <tr>
+            <td><label for="provincia">Provincia:</label> <input type="text" id="provincia"></td>
+            <td><label for="Telefono">Telefono</label> <input type="text" id="Telefono"></td>
+        </tr>
+        <tr>
+            <td><label for="opcion"></label> </td>
+            <td>Escoja una opcion<br>
+                <select name="opcion" id="opcion">
+                    <option value="0"> - Seleccionar -</option>
+                    <option value="1">Opción 1</option>
+                    <option value="2">Opción 2</option></select></td>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="pago">Forma de pago</label></td>
+            <td> 
+                Escoja una opcion<br>
+                <input type="radio" name="pago" id="Tarjeta"> <label for="Tarjeta">Tarjeta de creadito</label>
+                <input type="radio" name="pago" id="Paypal"> <label for="Paypal">Paypal</label>
+                <input type="radio" name="pago" id="Bizum"> <label for="Bizum">Bizum</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="comentario">Comentario Personal</label>
+                <textarea name="comentario" id="comentario"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="verificar">Pulsa para verificar </label>
+                <button><img src="bien.png" width="20px" id="verificar"></button>
+                <br>
+                <button>Anular<img src="mal.png" width="20px" id="verificar"></button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html> 

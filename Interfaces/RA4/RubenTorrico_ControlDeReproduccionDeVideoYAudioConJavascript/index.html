@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <video id="IdVideo" width="600">
+            <source src="https://cdn.teachertube.com/mp4video604/355204.mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <div class="contenedorBotones">
+        <button id="IdReiniciar" onclick="reiniciar()">Reiniciar</button>
+        <button id="IdAtrasar" onclick="atrasar()">↞</button>
+        <button id="IdEmpezar" onclick="empezar()">▶</button> <!-- ❚❚ -->
+        <button id="IdAdelantar" onclick="adelantar()">↠</button>
+        <button id="IdSilenciar" onclick="silenciar()">silenciar Audio</button>
+        Volumen
+        <button id="IdMenos" onclick="menos()">-</button>
+        <button id="IdMas" onclick="mas()">+</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
