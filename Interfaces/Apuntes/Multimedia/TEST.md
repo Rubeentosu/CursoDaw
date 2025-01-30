@@ -4,13 +4,13 @@ b) Descargar las obras y compartirlas con otros siempre que se reconozca al auto
 c) Remezclar, adaptar y construir sobre el trabajo original de manera no comercial, siempre y cuando se atribuya al autor original y que las nuevas obras se distribuyan bajo la misma licencia. ​
 
 
-2. ¿Cuál es la licencia Creative Commons más restrictiva?c) 
+2. ¿Cuál es la licencia Creative Commons más restrictiva? c) 
 a) CC BY-SA ​
 b) CC BY-NC ​
 c) CC BY-NC-ND
 
 
-3. ¿Qué significa la "profundidad de color" en una imagen digital?b)
+3. ¿Qué significa la "profundidad de color" en una imagen digital? b)
 a) El número de píxeles por pulgada de una imagen. ​
 b) El número de bits utilizados para describir el color de cada píxel de una imagen en bitmap. ​
 c) La cantidad de puntos necesarios para describir una imagen mediante un algoritmo matemático. ​
