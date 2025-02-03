@@ -31,16 +31,22 @@ function empezar() {
     if (video.paused) {
         video.play();
         botonEmpezar.textContent = "❚❚";
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
     } else {
         video.pause();
         botonEmpezar.textContent = "▶";
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
     }
 }
 
 function reiniciar() {
     video.currentTime = 0;
-    video.pause();
-    botonEmpezar.textContent = "▶";
+    video.play();
+    botonEmpezar.textContent = "❚❚";
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
 }
 
 function atrasar() {
@@ -63,7 +69,8 @@ function silenciar() {
 
 function menos() {
     video.volume = video.volume - 0.1;
-    if (video.volume == 0) {
+    console.log(video.volume);
+    if (video.volume == 1.3877787807814457e-16) {
         botonMenos.disabled = true;
     }
     botonMas.disabled = false;

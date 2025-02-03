@@ -24,7 +24,7 @@
             $conexion = mysqli_connect($host, $user, $pass, $name_db);
             $prov = $_POST["provincia"];
 
-            $query = "SELECT * FROM CIUDADES WHERE Provincia = '$prov'";
+            $query = "SELECT * FROM CIUDADES WHERE provincia = '$prov'";
             $resultado = mysqli_query($conexion, $query);
 
             if (mysqli_num_rows($resultado) > 0) {
@@ -32,9 +32,9 @@
                 echo "<tr><th>Nombre Ciudad</th><th>Provincia</th><th>Número de Habitantes</th></tr>";
                 while ($registro = mysqli_fetch_assoc($resultado)) {
                     echo "<tr>";
-                    echo "<td>" . $registro["NombreCiudad"] . "</td>";
-                    echo "<td>" . $registro["Provincia"] . "</td>";
-                    echo "<td>" . $registro["NumHab"] . "</td>";
+                    echo "<td>" . $registro["nombreCiudad"] . "</td>";
+                    echo "<td>" . $registro["provincia"] . "</td>";
+                    echo "<td>" . $registro["numHab"] . "</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
