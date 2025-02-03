@@ -197,6 +197,7 @@ function cambiarUbicacionMesa() {
             mesas[numero].ubicacion = nuevaUbicacion; // Asignamos la nueva ubicación
             ubicacionesOcupadas[nuevaUbicacion] = numero; // Marcamos la nueva ubicación como ocupada
             mesas[numero].mostrarMensaje(`La mesa ${numero} ha sido movida a la ubicación ${nuevaUbicacion}.`);
+            console.log(ubicacionesOcupadas);
         } else {
             alert("Ubicación no válida o ya ocupada.");
         }
