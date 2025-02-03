@@ -30,6 +30,7 @@ class Mesa {
         for (let i = 1; i <= cantidad; i++) {
             if (this.clientes[i]) {
                 nuevosClientes[i] = this.clientes[i];
+                console.log(nuevosClientes);
             } else {
                 nuevosClientes[i] = [];
             }
@@ -114,6 +115,7 @@ function crearMesa() {
     } else {
         alert("Esa mesa ya existe.");
     }
+    console.log(mesas);
 }
 
 // Función para establecer el número de clientes de una mesa
