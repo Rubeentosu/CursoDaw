@@ -32,7 +32,7 @@ function verEnunciado() {
 // Función para la resolución del ejercicio
 function verResolucion() {
     // Expresión regular para validar el correo y la contraseña
-    let patronEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;0
+    let patronEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     let patronContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#\$@!%&?])(?=\S{8,16}$)/;
 
     // Pedir correo y contraseña hasta que sean las dos correctas llamando a sus respectivas funciones

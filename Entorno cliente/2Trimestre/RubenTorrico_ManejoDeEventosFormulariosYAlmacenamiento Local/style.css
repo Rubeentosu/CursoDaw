@@ -66,4 +66,14 @@ body .important-tex {
 }
 .centered :not(:last-child) {
   margin-right: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.contenedorFormulario{
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  input{
+    float: right;
+  }
+  
+}

@@ -33,5 +33,29 @@
   <p class="important-text">4,70 €</p>
   <button class="buy-button">Comprar</button>
 </div>
+<div class="contenedorFormulario">
+  <form action="">
+    <h2>Datos de contacto</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required pattern="[A-Z][a-z]{3,10}">
+    <br><br>
+    <label for="primerApellido">Primer apellido:</label>
+    <input type="text" id="primerApellido" name="primerApellido" required pattern="[A-Z][a-z]{4,8}">
+    <br><br>
+    <label for="segundoApellido">Segundo apellido:</label>
+    <input type="text" id="segundoApellido" name="segundoApellido" pattern="[A-Z][a-z]{4,8}">
+    <br><br>
+    <label for="telefono">Teléfono de contacto:</label>
+    <input type="tel" id="telefono" name="telefono" required pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}">
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2,4})?$/">
+    <br><br>
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required>
+    <br><br>
+    <button class="buy-button">Enviar</button>
+  </form>
+</div>
 </body>
 </html>
