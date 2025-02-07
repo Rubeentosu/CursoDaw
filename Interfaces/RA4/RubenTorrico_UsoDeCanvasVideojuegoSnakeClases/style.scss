@@ -1,0 +1,26 @@
+$cuadrado-rojos: #ff0000;
+$cuadrado-Verdes: #00ff00;
+$cuadrado-Azules: #61dafb;
+$background-canva: #282c34;
+$background-body: #1e2742;
+$border-camba: #61dafb 2px;
+
+
+body{
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-body;
+    height: 100vh;
+
+
+    canvas{
+        margin: 0;
+        background-color: $background-canva;
+        border: $border-camba;
+    }
+}
+
+

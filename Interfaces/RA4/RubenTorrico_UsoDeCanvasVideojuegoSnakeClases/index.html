@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación básica con Canvas</title>
+    <script src="logica.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="juegoCanvas" width="600" height="480">
+        Tu navegador no soporta canvas.
+    </canvas>
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById('juegoCanvas');
+            const context = canvas.getContext('2d');
+            const juego = new Juego(canvas, context);
+            juego.iniciarJuego();
+        };
+    </script>
+</body>
+</html>

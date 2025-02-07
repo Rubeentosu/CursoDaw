@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e2742;
+  height: 100vh;
+}
+body canvas {
+  margin: 0;
+  background-color: #282c34;
+  border: #61dafb 2px;
+}/*# sourceMappingURL=style.css.map */
