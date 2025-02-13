@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Kiosko Fernando</h1>   
-<p>Nuestras delicatessen ahora te las llevamos a casa.</p>   
-<button class="primary-button">Ver Menú</button>
-<button class="secondary-button">Registrarse</button>
-<h2>Los más demandados</h2>
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/468/468339.png" alt="Gambas">
-  <h3>Gamba roja</h3>
-  <p>Gamba roja de Garrucha (150 gramos).</p>
-  <p class="important-text">3,50 €</p>
-  <button class="buy-button">Comprar</button>
-</div>
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/1137/1137928.png" alt="Mejillones">
-  <h3>Mejillones</h3>
-  <p>Mejillones del Cantábrico (2 unidades).</p>
-  <p class="important-text">2,00 €</p>
-  <button class="buy-button">Comprar</button>
-</div>
-<div class="product centered">
-  <img src="https://cdn-icons-png.flaticon.com/512/3751/3751463.png" alt="Prod 3">
-  <h3>Zamburiñas</h3>
-  <p>Zamburiñas gallegas (2 unidades)</p>
-  <p class="important-text">4,70 €</p>
-  <button class="buy-button">Comprar</button>
-</div>
-<div class="contenedorFormulario">
-  <form action="">
-    <h2>Datos de contacto</h2>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required pattern="[A-Z][a-z]{3,10}">
-    <br><br>
-    <label for="primerApellido">Primer apellido:</label>
-    <input type="text" id="primerApellido" name="primerApellido" required pattern="[A-Z][a-z]{4,8}">
-    <br><br>
-    <label for="segundoApellido">Segundo apellido:</label>
-    <input type="text" id="segundoApellido" name="segundoApellido" pattern="[A-Z][a-z]{4,8}">
-    <br><br>
-    <label for="telefono">Teléfono de contacto:</label>
-    <input type="tel" id="telefono" name="telefono" required pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}">
-    <br><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2,4})?$/">
-    <br><br>
-    <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" name="direccion" required>
-    <br><br>
-    <button class="buy-button">Enviar</button>
-  </form>
-</div>
+  <h1>Kiosko Fernando</h1>
+  <p>Nuestras delicatessen ahora te las llevamos a casa.</p>
+  <button class="primary-button">Ver Menú</button>
+  <button class="secondary-button">Registrarse</button>
+  <h2>Los más demandados</h2>
+  <div class="product">
+    <img src="https://cdn-icons-png.flaticon.com/512/468/468339.png" alt="Gambas">
+    <h3>Gamba roja</h3>
+    <p>Gamba roja de Garrucha (150 gramos).</p>
+    <p class="important-text">3,50 €</p>
+    <button class="buy-button">Comprar</button>
+  </div>
+  <div class="product">
+    <img src="https://cdn-icons-png.flaticon.com/512/1137/1137928.png" alt="Mejillones">
+    <h3>Mejillones</h3>
+    <p>Mejillones del Cantábrico (2 unidades).</p>
+    <p class="important-text">2,00 €</p>
+    <button class="buy-button">Comprar</button>
+  </div>
+  <div class="product centered">
+    <img src="https://cdn-icons-png.flaticon.com/512/3751/3751463.png" alt="Prod 3">
+    <h3>Zamburiñas</h3>
+    <p>Zamburiñas gallegas (2 unidades)</p>
+    <p class="important-text">4,70 €</p>
+    <button class="buy-button">Comprar</button>
+  </div>
+  <div class="contenedorFormulario">
+    <form id="contactForm" action="">
+      <h2>Datos de contacto</h2>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z]{3,10}">
+      <span class="error" id="nombreError"></span>
+      <br><br>
+      <label for="primerApellido">Primer apellido:</label>
+      <input type="text" id="primerApellido" name="primerApellido" required pattern="[A-Za-z]{4,8}">
+      <span class="error" id="primerApellidoError"></span>
+      <br><br>
+      <label for="segundoApellido">Segundo apellido:</label>
+      <input type="text" id="segundoApellido" name="segundoApellido" pattern="[A-Z][a-z]{4,8}">
+      <span class="error" id="segundoApellidoError"></span>
+      <br><br>
+      <label for="telefono">Teléfono de contacto:</label>
+      <input type="tel" id="telefono" name="telefono" required pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}">
+      <span class="error" id="telefonoError"></span>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required
+        pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2,4})?">
+      <span class="error" id="emailError"></span>
+      <br><br>
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required>
+      <span class="error" id="direccionError"></span>
+      <br><br>
+      <button class="buy-button" type="submit">Enviar</button>
+    </form>
+  </div>
 </body>
+
 </html>
