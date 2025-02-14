@@ -32,21 +32,24 @@ function iniciar(){
 }
 
 function run(){
-    requestAnimationFrame(run);
+    setTimeout(function() {
+        requestAnimationFrame(run);
     accionesJuego();
     pintarLienzo(lienzo);
+    }, 100); // Retardo de 100 ms
+
 }
 
 function accionesJuego(){
     // Modificamos la dirección del jugador en función de la tecla presionada
     if(lastPress === KEY_RIGHT && lastPress !== KEY_LEFT){
-        x += 1; // Mover a la derecha
+        x += 10; // Mover a la derecha
     } else if(lastPress === KEY_LEFT && lastPress !== KEY_RIGHT){
-        x -= 1; // Mover a la izquierda
+        x -= 10; // Mover a la izquierda
     } else if(lastPress === KEY_UP && lastPress !== KEY_DOWN){
-        y -= 1; // Mover hacia arriba
+        y -= 10; // Mover hacia arriba
     } else if(lastPress === KEY_DOWN && lastPress !== KEY_UP){
-        y += 1; // Mover hacia abajo
+        y += 10; // Mover hacia abajo
     }
 
     // Si el jugador toca la pared, mostrar alerta y reiniciar posición
