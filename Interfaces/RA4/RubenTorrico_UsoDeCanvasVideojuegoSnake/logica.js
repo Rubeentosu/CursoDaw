@@ -36,20 +36,20 @@ function run(){
         requestAnimationFrame(run);
     accionesJuego();
     pintarLienzo(lienzo);
-    }, 100); // Retardo de 100 ms
+    }, 0); // Retardo de 100 ms
 
 }
 
 function accionesJuego(){
     // Modificamos la dirección del jugador en función de la tecla presionada
     if(lastPress === KEY_RIGHT && lastPress !== KEY_LEFT){
-        x += 10; // Mover a la derecha
+        x += 1; // Mover a la derecha
     } else if(lastPress === KEY_LEFT && lastPress !== KEY_RIGHT){
-        x -= 10; // Mover a la izquierda
+        x -= 1; // Mover a la izquierda
     } else if(lastPress === KEY_UP && lastPress !== KEY_DOWN){
-        y -= 10; // Mover hacia arriba
+        y -= 1; // Mover hacia arriba
     } else if(lastPress === KEY_DOWN && lastPress !== KEY_UP){
-        y += 10; // Mover hacia abajo
+        y += 1; // Mover hacia abajo
     }
 
     // Si el jugador toca la pared, mostrar alerta y reiniciar posición
@@ -76,7 +76,7 @@ function accionesJuego(){
 
     // Verificar si el cuadrado verde toca alguna pared
     for(let i = 0; i < paredes.length; i++){
-        if(x < paredes[i][0] && x + 10 > paredes[i][0] && y < paredes[i][1] && y + 10 > paredes[i][1]){
+        if(x < paredes[i][0] + 10 && x + 10 > paredes[i][0] && y < paredes[i][1] + 10 && y + 10 > paredes[i][1]){
             alert("¡Perdiste! Has tocado una pared.");
             reiniciarJuego();
         }
