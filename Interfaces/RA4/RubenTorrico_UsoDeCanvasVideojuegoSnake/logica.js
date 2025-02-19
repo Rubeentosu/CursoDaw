@@ -1,27 +1,26 @@
 let canvas = null, lienzo = null;
 
-// Posición inicial de la serpiente (array de valores)
+//Posición inicial de la serpiente (array de valores)
 let serpiente = [50, 50]; // Representa la cabeza de la serpiente en x = 50, y = 50
 let lastPress = null;
 
-// Posición inicial de la comida
-let comidaX = Math.floor(Math.random() * 400);
-let comidaY = Math.floor(Math.random() * 400);
+//Posición inicial de la comida
+let cuadradoRojoX = Math.floor(Math.random() * 600);
+let cuadradoRojoY = Math.floor(Math.random() * 400);
 
-// Paredes y puntuación
+
+//Paredes y puntuación
 let paredes = [];
 let puntuacion = 0;
 
-// Teclas
+//Teclas
 const KEY_LEFT = "ArrowLeft";
 const KEY_UP = "ArrowUp";
 const KEY_RIGHT = "ArrowRight";
 const KEY_DOWN = "ArrowDown";
 
-// Dirección inicial
+//Dirección inicial
 let direccion = '';
-
-let numParedes = 1;
 
 function iniciar() {
     canvas = document.getElementById('lienzo');
@@ -34,21 +33,21 @@ function run() {
         requestAnimationFrame(run);
         accionesJuego();
         pintarLienzo();
-    }, 100);
+    }, 90);
 }
 
-// Esta función se llama después de que la serpiente haya comido la comida
+//Esta función se llama después de que la serpiente haya comido un cuadrado rojo
 function accionesJuego() {
     let cabezaX = serpiente[0];
     let cabezaY = serpiente[1];
 
-    // Mover la serpiente según la dirección actual
+    //Mover la serpiente según la dirección actual
     if (direccion === 'RIGHT') cabezaX += 10;
     if (direccion === 'LEFT') cabezaX -= 10;
     if (direccion === 'UP') cabezaY -= 10;
     if (direccion === 'DOWN') cabezaY += 10;
 
-    // Si la serpiente toca las paredes (sin rebote)
+    // Si la serpiente toca las paredes
     if (cabezaX < 0 || cabezaX >= canvas.width || cabezaY < 0 || cabezaY >= canvas.height) {
         alert("¡Perdiste! Has tocado una pared.");
         reiniciarJuego();
@@ -57,38 +56,35 @@ function accionesJuego() {
 
     // Verificar si la cabeza de la serpiente toca alguna parte de su cuerpo
     for (let i = 2; i < serpiente.length; i += 2) { // Comienza en el segundo segmento
-        if (serpiente[i] === cabezaX && serpiente[i + 1] === cabezaY) {
+        if (serpiente[i] === cabezaX && serpiente[i + 1] === cabezaY) { //Si la cabeza toca alguna parte de su cuerpo
             alert("¡Perdiste! Has chocado contigo misma.");
             reiniciarJuego();
             return;
         }
     }
 
-    // Si come la comida
-    if (cabezaX < comidaX + 10 && cabezaX + 10 > comidaX && cabezaY < comidaY + 10 && cabezaY + 10 > comidaY) {
-        // Agregar nueva parte en la dirección opuesta al movimiento
-        let colaX = serpiente[serpiente.length - 2];
-        let colaY = serpiente[serpiente.length - 1];
-        let nuevaParteX = colaX;
-        let nuevaParteY = colaY;
+    //Si llegas a 10 puntos, ganas
+    if (puntuacion === 100) {
+        alert("¡Felicidades! Has ganado.");
+        reiniciarJuego();
+        return;
+    }
 
-        if (lastPress === KEY_RIGHT) nuevaParteX -= 10;
-        if (lastPress === KEY_LEFT) nuevaParteX += 10;
-        if (lastPress === KEY_UP) nuevaParteY += 10;
-        if (lastPress === KEY_DOWN) nuevaParteY -= 10;
 
-        serpiente.push(nuevaParteX, nuevaParteY); // Agregar nueva parte
+    //Si pasa por el cuadrado rojo se agrega una nueva parte a la serpiente
+    if (cabezaX < cuadradoRojoX + 10 && cabezaX + 10 > cuadradoRojoX && cabezaY < cuadradoRojoY + 10 && cabezaY + 10 > cuadradoRojoY) {
+
+        serpiente.push(cabezaX+10, cabezaY+10); // Agregar nueva parte
 
         // Reubicar la comida
-        comidaX = Math.floor(Math.random() * (canvas.width - 10));
-        comidaY = Math.floor(Math.random() * (canvas.height - 10));
+        cuadradoRojoX = Math.floor(Math.random() * (canvas.width - 10));
+        cuadradoRojoY = Math.floor(Math.random() * (canvas.height - 10));
 
         // Aumentar la dificultad y agregar paredes aleatorias
         agregarParedesAleatorias(1); // Solo se agrega una pared por comida
-        numParedes++; // Solo incrementamos el contador de paredes en 1
 
-        // Aumentar puntuación
-        puntuacion++;
+        // Aumentar puntuación en +10
+        puntuacion += 10;
     }
 
     // Verificar colisión con las paredes
@@ -100,18 +96,21 @@ function accionesJuego() {
         }
     }
 
-    // Agregar la nueva cabeza
+    //Va guardando la posición de la serpiente
     serpiente.unshift(cabezaX, cabezaY);
+    console.log(serpiente);
 
-    // Si no ha comido, eliminar la última parte de la serpiente
+    //Si la serpiente es más larga que 2, eliminar la cola para que no lo haga de forma infinita
     if (serpiente.length > 2) {
-        serpiente.pop();
-        serpiente.pop();
+        serpiente.splice(serpiente.length - 2, 2);
     }
+
+    //Actualizar la puntuación
+    document.getElementById('puntuacion').innerHTML = `Puntuacion ${puntuacion}`;
+    
 }
 
-
-// Asegúrate de que solo agregue una pared al comer la comida
+//Asegura de que solo agregue una pared al pasar por el cuadrado rojo
 function agregarParedesAleatorias(numParedes) {
     for (let j = 0; j < numParedes; j++) {
         let nuevaParedX, nuevaParedY;
@@ -123,43 +122,43 @@ function agregarParedesAleatorias(numParedes) {
 
             posicionValida = true;
 
-            // Verificar que la pared no esté en la misma posición que la comida
-            if (nuevaParedX === comidaX && nuevaParedY === comidaY) {
+            //Verificar que la pared no esté en la misma posición que la comida
+            if (nuevaParedX === cuadradoRojoX && nuevaParedY === cuadradoRojoY) {
                 posicionValida = false;
-                continue; // Si colisiona con la comida, generar otra posición
+                continue; //Si colisiona con el cuadrado rojo, generar otra posición
             }
 
-            // Verificar que la pared no esté en la misma posición que la serpiente
+            //Verificar que la pared no esté en la misma posición que la serpiente
             for (let i = 0; i < serpiente.length; i += 2) {
                 if (serpiente[i] === nuevaParedX && serpiente[i + 1] === nuevaParedY) {
                     posicionValida = false;
-                    break;  // Si colisiona con la serpiente, generar otra posición
+                    break;  //Si colisiona con la serpiente, generar otra posición
                 }
             }
 
-            // Verificar que la pared no esté en la misma posición que otras paredes
+            //Verificar que la pared no esté en la misma posición que otras paredes
             for (let i = 0; i < paredes.length; i++) {
                 if (paredes[i][0] === nuevaParedX && paredes[i][1] === nuevaParedY) {
                     posicionValida = false;
-                    break;  // Si colisiona con otra pared, generar otra posición
+                    break;  //Si colisiona con otra pared, generar otra posición
                 }
             }
         }
 
         paredes.push([nuevaParedX, nuevaParedY]);
+        console.log(paredes);
     }
 }
 
 
-
+//Reinicimos el juego
 function reiniciarJuego() {
-    serpiente = [50, 50]; // Volver a la posición inicial
+    serpiente = [50, 50];
     lastPress = null;
     puntuacion = 0;
     paredes = [];
-    numParedes = 1;
-    comidaX = Math.floor(Math.random() * (canvas.width - 10));
-    comidaY = Math.floor(Math.random() * (canvas.height - 10));
+    cuadradoRojoX = Math.floor(Math.random() * (canvas.width - 10));
+    cuadradoRojoY = Math.floor(Math.random() * (canvas.height - 10));
     direccion = '';
 }
 
@@ -167,17 +166,17 @@ function pintarLienzo() {
     lienzo.fillStyle = "#282c34";
     lienzo.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Dibujar la serpiente
+    //Dibujar la serpiente
     lienzo.fillStyle = "#0f0";
     for (let i = 0; i < serpiente.length; i += 2) {
         lienzo.fillRect(serpiente[i], serpiente[i + 1], 10, 10);
     }
 
-    // Dibujar la comida
+    //Dibujar la comida
     lienzo.fillStyle = "#f00";
-    lienzo.fillRect(comidaX, comidaY, 10, 10);
+    lienzo.fillRect(cuadradoRojoX, cuadradoRojoY, 10, 10);
 
-    // Dibujar las paredes
+    //Dibujar las paredes
     lienzo.fillStyle = "#00f";
     for (let i = 0; i < paredes.length; i++) {
         lienzo.fillRect(paredes[i][0], paredes[i][1], 10, 10);
@@ -185,7 +184,7 @@ function pintarLienzo() {
 
 }
 
-// Asegurarse de que la dirección no sea opuesta
+//Me aseguro de que la dirección no sea opuesta
 document.addEventListener('keydown', function (event) {
     if (event.code === KEY_RIGHT && direccion !== 'LEFT') {
         direccion = 'RIGHT';
