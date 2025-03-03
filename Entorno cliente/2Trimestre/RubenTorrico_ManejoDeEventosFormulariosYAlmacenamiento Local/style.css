@@ -11,6 +11,10 @@ body p {
   font-size: 1.2rem;
   color: #555;
 }
+body label {
+  font-size: 1.2rem;
+  color: #555;
+}
 body button {
   padding: 10px 20px;
   border: none;
@@ -76,4 +80,30 @@ body .important-tex {
     float: right;
   }
   
+}
+#borrarPedido{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  background-color: #217dbb;
+}
+#realizarPedido{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  background-color: #217dbb;
+}
+.contenedorFormularioLista{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  input{
+    float: right;
+  }
+  font-size: 1.2rem;
+  color: #555;
 }
