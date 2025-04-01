@@ -1,0 +1,32 @@
+En una interfaz de un robot de cirugía con el robot da vinci aparecía estas pestaña describeme lo que significas cada una.
+
+1. fenestrated bipolar forceps
+2. Prograsp forceps
+3. Desacople antes de mover la mesa
+4. Monipolar curved scissors
+
+
+Las pestañas que mencionas parecen referirse a herramientas y precauciones dentro de la interfaz del robot quirúrgico Da Vinci, que es un sistema de cirugía asistida por robot. Aquí tienes el significado de cada una:
+
+Fenestrated Bipolar Forceps (Pinzas bipolares fenestradas)
+Son pinzas quirúrgicas utilizadas para sujetar y manipular tejidos durante la cirugía.
+Fenestradas significa que tienen una abertura en la parte de agarre, lo que permite una mejor sujeción sin dañar el tejido.
+Bipolares indica que utilizan energía eléctrica para coagular los vasos sanguíneos de manera controlada, minimizando el daño térmico a los tejidos cercanos.
+
+ProGrasp Forceps (Pinzas ProGrasp)
+Son pinzas de alta precisión con una gran fuerza de agarre.
+Se usan para sujetar tejidos más firmemente sin deslizamiento.
+Permiten una manipulación segura de estructuras delicadas o resistentes.
+
+Desacople antes de mover la mesa
+Es una advertencia de seguridad.
+Antes de mover la mesa de operaciones, se debe desacoplar el robot para evitar daños en los instrumentos quirúrgicos y en el paciente.
+Si la mesa se mueve sin desacoplar el robot, los brazos quirúrgicos podrían hacer movimientos bruscos y peligrosos.
+
+Monopolar Curved Scissors (Tijeras curvas monopolares)
+Son tijeras quirúrgicas especializadas que permiten cortar tejidos con precisión.
+
+Curvas para facilitar el acceso a diferentes ángulos dentro del cuerpo.
+Monopolares porque usan corriente eléctrica para cortar y coagular al mismo tiempo, reduciendo el sangrado.
+
+Estas herramientas y advertencias son esenciales en el uso del robot Da Vinci, ya que garantizan una cirugía precisa, segura y con menos complicaciones para el paciente.
